@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Canvas View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CanvasViewController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-jn-SqR">
+                                <rect key="frame" x="0.0" y="398" width="375" height="269"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="DMI-xZ-d8v">
+                                        <rect key="frame" x="25" y="61" width="60" height="60"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="rDv-Dc-0gz" appends="YES" id="AU0-rX-NXx"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="excited" translatesAutoresizingMaskIntoConstraints="NO" id="8D3-XR-MGJ">
+                                        <rect key="frame" x="157" y="61" width="60" height="60"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3mV-Bj-g15" appends="YES" id="OUr-sF-PhK"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="3wj-t6-kcx">
+                                        <rect key="frame" x="287" y="61" width="60" height="60"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="GVV-3j-PIf" appends="YES" id="xdG-Up-wKd"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-tF-ftl">
+                                        <rect key="frame" x="25" y="171" width="60" height="60"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Bdu-Ju-qhc" appends="YES" id="gx3-hd-hiW"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="tongue" translatesAutoresizingMaskIntoConstraints="NO" id="ELl-Cb-z1O">
+                                        <rect key="frame" x="157" y="171" width="60" height="60"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="TrL-ib-Oha" appends="YES" id="flZ-ej-h3V"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="wink" translatesAutoresizingMaskIntoConstraints="NO" id="ZWV-CF-fAx">
+                                        <rect key="frame" x="287" y="171" width="60" height="60"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="9bb-3S-Oyh" appends="YES" id="cA5-8M-Q6s"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="FY7-qT-7CT">
+                                        <rect key="frame" x="177" y="24" width="20" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="3wj-t6-kcx" firstAttribute="leading" secondItem="8D3-XR-MGJ" secondAttribute="trailing" constant="70" id="1ji-1h-KD2"/>
+                                    <constraint firstItem="ELl-Cb-z1O" firstAttribute="leading" secondItem="bsU-tF-ftl" secondAttribute="trailing" constant="72" id="5bo-le-o8X"/>
+                                    <constraint firstItem="8D3-XR-MGJ" firstAttribute="top" secondItem="3wj-t6-kcx" secondAttribute="top" id="EAH-Oe-Pb5"/>
+                                    <constraint firstItem="8D3-XR-MGJ" firstAttribute="top" secondItem="FY7-qT-7CT" secondAttribute="bottom" constant="23" id="EW1-h0-Gz1"/>
+                                    <constraint firstItem="ZWV-CF-fAx" firstAttribute="top" secondItem="bsU-tF-ftl" secondAttribute="top" id="Em8-Qv-wH0"/>
+                                    <constraint firstAttribute="trailing" secondItem="3wj-t6-kcx" secondAttribute="trailing" constant="28" id="MUg-dB-Mcs"/>
+                                    <constraint firstItem="ZWV-CF-fAx" firstAttribute="leading" secondItem="ELl-Cb-z1O" secondAttribute="trailing" constant="70" id="MjN-p3-QhH"/>
+                                    <constraint firstItem="8D3-XR-MGJ" firstAttribute="centerX" secondItem="FY7-qT-7CT" secondAttribute="centerX" id="V3u-Gl-kCu"/>
+                                    <constraint firstItem="3wj-t6-kcx" firstAttribute="top" secondItem="eVd-jn-SqR" secondAttribute="top" constant="61" id="ftx-2S-1ey"/>
+                                    <constraint firstItem="ZWV-CF-fAx" firstAttribute="top" secondItem="ELl-Cb-z1O" secondAttribute="top" id="kbQ-Rl-VZF"/>
+                                    <constraint firstItem="ZWV-CF-fAx" firstAttribute="leading" secondItem="3wj-t6-kcx" secondAttribute="leading" id="nIu-Hj-dPK"/>
+                                    <constraint firstItem="bsU-tF-ftl" firstAttribute="leading" secondItem="DMI-xZ-d8v" secondAttribute="leading" id="plf-Tu-0NM"/>
+                                    <constraint firstItem="8D3-XR-MGJ" firstAttribute="top" secondItem="DMI-xZ-d8v" secondAttribute="top" id="sat-kH-q9o"/>
+                                    <constraint firstItem="ZWV-CF-fAx" firstAttribute="top" secondItem="3wj-t6-kcx" secondAttribute="bottom" constant="50" id="wQL-Df-5rO"/>
+                                    <constraint firstItem="bsU-tF-ftl" firstAttribute="top" secondItem="DMI-xZ-d8v" secondAttribute="bottom" constant="50" id="xoS-X2-7iw"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Y03-Yz-ZWg" appends="YES" id="QIQ-vL-GPx"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eVd-jn-SqR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Jo-oU-7e0"/>
+                            <constraint firstItem="eVd-jn-SqR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="378" id="X9v-X1-Elj"/>
+                            <constraint firstItem="eVd-jn-SqR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hLE-fk-Rjt"/>
+                            <constraint firstItem="eVd-jn-SqR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hPh-Iq-Org"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="trayView" destination="eVd-jn-SqR" id="JpV-LQ-alz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Y03-Yz-ZWg">
+                    <connections>
+                        <action selector="didPanTray:" destination="BYZ-38-t0r" id="wSF-by-VLD"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="rDv-Dc-0gz">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="0hn-qT-Ay2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3mV-Bj-g15">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="HQz-j4-QUn"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GVV-3j-PIf">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="3c8-a9-0aS"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Bdu-Ju-qhc">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="HMc-1L-mIh"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="TrL-ib-Oha">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="wBh-ak-nXi"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9bb-3S-Oyh">
+                    <connections>
+                        <action selector="didPanFace:" destination="BYZ-38-t0r" id="vXF-Vv-pa1"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-121" y="55"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dead" width="60" height="60"/>
+        <image name="down_arrow" width="20" height="14"/>
+        <image name="excited" width="60" height="60"/>
+        <image name="happy" width="60" height="60"/>
+        <image name="sad" width="60" height="60"/>
+        <image name="tongue" width="60" height="60"/>
+        <image name="wink" width="60" height="60"/>
+    </resources>
 </document>
